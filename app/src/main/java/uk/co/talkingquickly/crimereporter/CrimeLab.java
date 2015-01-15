@@ -24,6 +24,7 @@ public class CrimeLab {
         mSerializer = new CriminalIntentJSONSerializer(mAppContext, FILENAME);
         try {
             mCrimes = mSerializer.loadCrimes();
+            Log.d(TAG, "Crimes loaded from JSON");
         } catch (Exception e) {
             mCrimes = new ArrayList<Crime>();
             Log.e(TAG, "Error loading crimes", e);
